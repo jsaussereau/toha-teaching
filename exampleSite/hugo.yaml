@@ -116,7 +116,8 @@ params:
       enable: true
       showAuthor: true # shows the author of post (defaults true)
       showDate: true # shows date in post cards and in post pages (defaults true)
-      groupByCategory: true # show /posts page grouped by category (default false). Set false to show all posts.
+      groupByCategory: true # show /posts page grouped by category (default false).
+      nextPrevNavigatorBySection: true # restrict next and previous buttons in post page to only show posts in the same section. (default false).
       # Share post on different social media
       shareButtons:
         facebook: true
