@@ -4,6 +4,7 @@
 {{ $notesEnabled  := site.Params.features.notes.enable  | default false }}
 {{ $notesTitle := site.Params.features.notes.title  | default (i18n "notes") }}
 {{ $maxVisibleSections   := site.Params.topNavbar.maxVisibleSections   | default 5 }}
+{{ $blurredNavbar := site.Params.topNavbar.blurTransparentNavbar | default false }}
 
 {{/*  keep backward compatibility for blog post  */}}
 {{ if site.Params.enableBlogPost }}
@@ -71,7 +72,7 @@
   {{ $navBarTitle = site.Title }}
 {{ end }}
 
-<nav class="navbar navbar-expand-xl top-navbar shadow {{ if .IsHome}}transparent-navbar homepage{{end}}" id="top-navbar">
+<nav class="navbar navbar-expand-xl top-navbar shadow {{ if .IsHome}}transparent-navbar homepage{{end}}{{ if $blurredNavbar }} blurred{{ end }}" id="top-navbar">
   <div class="container">
     {{ if not .IsHome }}
     <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">

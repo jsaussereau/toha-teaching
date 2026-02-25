@@ -133,6 +133,12 @@
     .feather-menu {
       stroke: get-light-color('inverse-text-color');
     }
+
+    &.blurred {
+      -webkit-backdrop-filter: saturate(120%)blur(12px);
+      backdrop-filter: saturate(120%)blur(12px);
+      background-color: rgba(get-dark-color('bg-primary'), 0.4) !important;
+    }
   }
 
   #themeMenu {

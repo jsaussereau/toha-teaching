@@ -96,6 +96,7 @@ params:
   # Configure the number of section title visible in the top navbar
   topNavbar:
     maxVisibleSections: 5
+    blurTransparentNavbar: true # enable a blur effect for the top navbar (default false)
 
   # Configure various features of this theme
   features:
@@ -118,6 +119,7 @@ params:
       showDate: true # shows date in post cards and in post pages (defaults true)
       groupByCategory: true # show /posts page grouped by category (default false).
       nextPrevNavigatorBySection: true # restrict next and previous buttons in post page to only show posts in the same section. (default false).
+      navbarCurrentSectionOnly: true # only show current section in the navbar when you are in a post page. (default false).
       # Share post on different social media
       shareButtons:
         facebook: true
