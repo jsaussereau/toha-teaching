@@ -34,6 +34,7 @@
     {{ $groupByCategory := site.Params.features.blog.groupByCategory | default false }}
     {{ if and $isPostsRoot $groupByCategory }}
       {{ $sections := .Sections }}
+      {{ $sections = sort $sections "Weight" }}
       <div class="container-fluid post-card-holder" id="post-card-holder">
         {{ if gt (len $sections) 0 }}
           {{ range $sections }}
