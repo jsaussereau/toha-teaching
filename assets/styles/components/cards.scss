@@ -56,6 +56,8 @@
 
 .post-card {
   width: 24rem;
+	margin-bottom: 10px;
+	margin-top: 0px;
   display: inline-flex;
 
   .post-card-link {
@@ -65,6 +67,8 @@
 
   .card {
     margin: 5px;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
     position: relative;
 
     &:hover,
@@ -79,7 +83,7 @@
 
     .card-body {
       padding: 1.25rem !important;
-      padding-bottom: 0 !important;
+      padding-bottom: 15px !important;
 
       .post-summary {
         overflow: hidden;
@@ -93,7 +97,7 @@
       }
     }
     .card-footer {
-      margin-top: auto;
+      margin-top: -1.25rem;
 
       span {
         font-size: 10pt;
