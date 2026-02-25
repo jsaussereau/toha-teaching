@@ -4,10 +4,8 @@
       {{ $postLink := partial "helpers/get-post-link.html" . }}
       {{ $isExternal := .Params.externalLink }}
       <a href="{{ $postLink }}" class="post-card-link"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
-          {{ $hero:= partial "helpers/get-hero.html" (dict "context" . "width" "500x") }}
-          <img class="card-img-top" src='{{ $hero.RelPermalink }}'
-            alt="Hero Image" loading="lazy">
-        </a>
+        <img class="card-img-top" src='{{ partial "helpers/get-hero.html" . }}' alt="Hero Image">
+      </a>
     </div>
     <div class="card-body">
       <a href="{{ $postLink }}" class="post-card-link"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>

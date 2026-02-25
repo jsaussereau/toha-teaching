@@ -115,6 +115,7 @@ params:
     blog:
       enable: true
       showAuthor: true # shows the author of post (defaults true)
+      groupByCategory: true # show /posts page grouped by category (default false). Set false to show all posts.
       # Share post on different social media
       shareButtons:
         facebook: true
