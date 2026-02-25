@@ -5,6 +5,9 @@ other = "Home"
 [posts]
 other = "Posts"
 
+[all_sections]
+other = "All Sections"
+
 [toc_heading]
 other = "Table of Contents"
 

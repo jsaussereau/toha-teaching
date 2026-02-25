@@ -3,7 +3,15 @@
 other = "Accueil"
 
 [posts]
+one = "Article"
 other = "Articles"
+
+[courses]
+one = "Enseignement"
+other = "Enseignements"
+
+[all_sections]
+other = "Toutes les sections"
 
 [toc_heading]
 other = "Table des matières"
@@ -15,7 +23,7 @@ other = "Mots clés"
 other = "Catégories"
 
 [at]
-other = "chez"
+other = "à"
 
 [resume]
 other = "Mon Curriculum Vitæ"
