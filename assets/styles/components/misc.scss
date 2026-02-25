@@ -17,10 +17,10 @@
 }
 
 pre {
+  background-color: get-light-color('bg-pre') !important;
+  border-radius: 6px;
   margin: 5px;
-  & > code {
-    padding: 10px !important;
-  }
+  padding: 10px 15px;
 }
 
 @include media('<=large') {
@@ -51,6 +51,9 @@ pre {
 }
 
 html[data-theme='dark'] {
+  pre {
+    background-color: get-dark-color('bg-pre') !important;
+  }
   .paginator {
     .page-item {
       & > a {
@@ -75,5 +78,8 @@ html[data-theme='dark'] {
         }
       }
     }
+  }
+  .admonition-content {
+    background-color: get-dark-color('bg-pre') !important;
   }
 }
