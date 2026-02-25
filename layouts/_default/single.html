@@ -8,6 +8,7 @@
 
 {{ define "sidebar" }}
   {{ $isPost := and .IsPage (eq .Section "posts") }}
+  {{ $allSectionsButton  := site.Params.features.blog.allSectionsButton | default (i18n "all_sections") }}
   {{ $navbarCurrentSectionOnly := site.Params.features.blog.navbarCurrentSectionOnly | default false }}
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder{{ if $isPost }} in-post{{ end }}">
@@ -19,7 +20,7 @@
           <div class="sidebar-button">
             <button class="btn filled-button" data-href="{{ .Type | relLangURL }}" data-filter="all" onclick="window.location.href=this.dataset.href">
               <i class="fa-solid fa-circle-arrow-left" style="margin-right: 5px;"></i>
-              {{ i18n "all_sections" }}
+              {{ $allSectionsButton }}
             </button>
           </div>
         {{ end }}
