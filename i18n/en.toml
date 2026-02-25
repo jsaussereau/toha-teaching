@@ -3,6 +3,7 @@
 other = "Home"
 
 [posts]
+one = "Post"
 other = "Posts"
 
 [all_sections]

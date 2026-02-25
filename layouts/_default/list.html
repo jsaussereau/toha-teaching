@@ -54,7 +54,8 @@
                     {{ if and site.Params.features.tags.enable site.Params.features.tags.on_card }}
                       {{ partial "misc/tags.html" .Params.tags }}
                     {{ end }}
-                    <p class="card-text text-muted">{{ len .RegularPagesRecursive }} {{ i18n "posts" }}</p>
+                    {{ $postCount := len .RegularPagesRecursive }}
+                    <p class="card-text text-muted">{{ $postCount }} {{ i18n "posts" $postCount }}</p>
                   </a>
                 </div>
               </div>

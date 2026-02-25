@@ -6,10 +6,6 @@ other = "Accueil"
 one = "Article"
 other = "Articles"
 
-[courses]
-one = "Enseignement"
-other = "Enseignements"
-
 [all_sections]
 other = "Toutes les sections"
 
