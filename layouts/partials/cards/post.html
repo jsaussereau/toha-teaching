@@ -1,4 +1,5 @@
 <div class="post-card">
+  {{ $showDate := site.Params.features.blog.showDate | default true }}
   <div class="card">
     <div class="card-head">
       {{ $postLink := partial "helpers/get-post-link.html" . }}
@@ -21,7 +22,9 @@
     </div>
     <div class="card-footer">
       <span class="float-start">
-          {{ .Date | time.Format ":date_full" }}
+          {{ if $showDate }}
+            {{ .Date | time.Format ":date_full" }}
+          {{ end }}
           {{ if site.Params.features.readingTime }} | {{.ReadingTime}} {{ i18n "minute" .ReadingTime }} {{ end }}</span>
       <a
       href="{{ $postLink }}"
