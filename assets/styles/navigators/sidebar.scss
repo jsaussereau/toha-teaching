@@ -8,15 +8,30 @@
   .sidebar-holder {
     position: sticky;
     background-color: get-light-color('bg-primary');
-    height: 100vh;
+    height: 100%;
     overflow: auto;
     box-shadow: $box-shadow;
     @include transition();
 
+    &.in-post {
+      height: -moz-fit-content;
+      height: fit-content;
+      max-height: -moz-fit-content;
+      max-height: fit-content;
+    }
+
     .sidebar {
       background: get-light-color('bg-primary');
-      height: 100vh;
+      height: 100%;
       @include transition();
+
+      &.in-post {
+        padding-bottom: 20px;
+        height: -moz-fit-content;
+        height: fit-content;
+        max-height: -moz-fit-content;
+        max-height: fit-content;
+      }
 
       #search-box {
         margin-left: 5%;
