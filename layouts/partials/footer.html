@@ -1,11 +1,12 @@
 {{/*  variables for enabling/disabling parts of the footer  */}}
-{{ $footerEnabled      := site.Params.footer.enable             | default true }}
-{{ $navigationEnabled  := site.Params.footer.navigation.enable  | default true }}
-{{ $customMenusEnabled := site.Params.footer.navigation.customMenus | default true }}
-{{ $contactMeEnabled   := site.Params.footer.contactMe.enable   | default true }}
-{{ $newsletterEnabled  := site.Params.footer.newsletter.enable  | default true }}
-{{ $credentialsEnabled := site.Params.footer.credentials.enable | default true }}
-{{ $disclaimerEnabled  := site.Params.footer.disclaimer.enable  | default false }}
+{{ $footerEnabled          := site.Params.footer.enable                 | default true }}
+{{ $navigationEnabled      := site.Params.footer.navigation.enable      | default true }}
+{{ $customMenusEnabled     := site.Params.footer.navigation.customMenus | default true }}
+{{ $contactMeEnabled       := site.Params.footer.contactMe.enable       | default true }}
+{{ $newsletterEnabled      := site.Params.footer.newsletter.enable      | default true }}
+{{ $credentialsEnabled     := site.Params.footer.credentials.enable     | default true }}
+{{ $disclaimerEnabled      := site.Params.footer.disclaimer.enable      | default false }}
+{{ $hugoAttributionEnabled := site.Params.footer.hugoAttribution        | default true }}
 
 {{/*  Keep backward compatibility for the newsletter function */}}
 {{ if site.Params.newsletter }}
@@ -197,20 +198,24 @@
     <div class="container">
       <div class="row text-start">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
-            <img src="{{ $themeLogo }}" alt="Toha Theme Logo">
-            Toha
-          </a>
+          {{ if $hugoAttributionEnabled }}
+            <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+              <img src="{{ $themeLogo }}" alt="Toha Theme Logo">
+              Toha
+            </a>
+          {{ end }}
         </div>
         <div class="col-md-4 text-center">{{ $copyrightNotice | markdownify }}</div>
         <div class="col-md-4 text-end">
-          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">{{ i18n "hugoAttributionText" }}
-          <img
-            src="{{ $hugoLogo }}"
-            alt="Hugo Logo"
-            height="18"
-          />
-          </a>
+          {{ if $hugoAttributionEnabled }}
+            <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">{{ i18n "hugoAttributionText" }}
+            <img
+              src="{{ $hugoLogo }}"
+              alt="Hugo Logo"
+              height="18"
+            />
+            </a>
+          {{ end }}
         </div>
       </div>
     </div>
